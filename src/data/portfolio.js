@@ -1,0 +1,230 @@
+export const portfolio = {
+  person: {
+    name: 'Santosh Yalawar',
+    role: 'Full Stack Developer',
+    specialty: 'Java + Spring Boot + React + DevOps',
+    experience: '6 months real project experience',
+    location: 'India',
+    email: 'santoshmyrohit@gmail.com',
+    photoUrl: '',
+    githubUrl: 'https://github.com/Santoshyalawar-hub/',
+    linkedinUrl: 'https://www.linkedin.com/in/santosh-yalawar-2454ba407/',
+    resumeUrl: '#resume',
+  },
+  hero: {
+    eyebrow: 'Full Stack Developer',
+    title: 'Full Stack Developer building secure web applications.',
+    summary:
+      '6 months of real project experience with Java, Spring Boot, React, REST APIs, JWT authentication, Docker, CI/CD, and cloud deployment.',
+    highlights: ['Spring Boot APIs', 'JWT security', 'React + Vite', 'Docker + CI/CD', 'GCP deployments'],
+    roles: ['Backend-focused Full Stack Developer', 'Spring Boot API Builder', 'React Product UI Developer', 'DevOps-aware Engineer'],
+    imageUrl: 'https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    imageCredit: 'Photo by olia danilevich on Pexels',
+    flow: [
+      { title: 'Backend', text: 'Spring Boot APIs, JWT, MySQL' },
+      { title: 'Frontend', text: 'React, Vite, Axios integration' },
+      { title: 'Deployment', text: 'Docker, CI/CD, cloud hosting' },
+    ],
+  },
+  stats: [
+    { value: '6 mo', label: 'Real project experience' },
+    { value: '3+', label: 'Cloud platforms used' },
+    { value: '12+', label: 'Core technologies' },
+    { value: '1', label: 'Main full-stack project' },
+  ],
+  proofPoints: [
+    {
+      title: 'Secure backend systems',
+      text: 'Designed REST APIs with Spring Security, JWT authentication, role checks, and CORS rules for frontend-backend communication.',
+    },
+    {
+      title: 'Product-minded frontend',
+      text: 'Built React + Vite interfaces around real workflows such as user management, tickets, attendance, and leave operations.',
+    },
+    {
+      title: 'Deployment discipline',
+      text: 'Worked with Docker, Docker Compose, GitHub workflows, Railway, Vercel, and GCP-style production configuration.',
+    },
+  ],
+  homeOverview: [
+    {
+      title: 'Backend foundation',
+      text: 'Java, Spring Boot, REST APIs, Spring Security, JWT, Hibernate/JPA, and MySQL.',
+    },
+    {
+      title: 'Frontend integration',
+      text: 'React, Vite, Axios, routing, protected views, and API-driven UI workflows.',
+    },
+    {
+      title: 'Deployment exposure',
+      text: 'Docker, Docker Compose, GitHub workflows, Railway, Vercel, GCP, and environment configuration.',
+    },
+  ],
+  projectTeaser: {
+    title: 'Main project: CrewSync HRMS',
+    text: 'A full-stack HRMS platform covering authentication, roles, tenant isolation, users, tickets, attendance, and leave workflows.',
+    linkText: 'Open project case study',
+  },
+  summary: [
+    'Strong backend expertise in Java, Spring Boot, REST APIs, Spring Security, and JWT authentication.',
+    'Skilled in frontend development using React, Vite, Axios, and API integration workflows.',
+    'Hands-on experience with Docker, Docker Compose, CI/CD pipelines, Git, GitHub, Postman, GCP, Railway, and Vercel.',
+    'Comfortable debugging production issues including CORS errors, deployment failures, environment variables, and API failures.',
+  ],
+  experience: {
+    title: 'Full Stack Developer',
+    meta: '6 months experience',
+    responsibilities: [
+      'Built and deployed full-stack applications using Spring Boot and React.',
+      'Designed and implemented RESTful APIs with JWT authentication and role-based access control.',
+      'Used Docker and Docker Compose for containerized development and deployment workflows.',
+      'Created CI/CD pipelines for automated build and deployment.',
+      'Tested APIs using Postman and used Git/GitHub for version control and collaboration.',
+      'Deployed applications on GCP, Railway, and Vercel while managing production configs.',
+      'Solved production issues such as CORS errors, deployment failures, and API integration defects.',
+    ],
+  },
+  projects: [
+    {
+      name: 'CrewSync HRMS Platform',
+      type: 'Main project',
+      description:
+        'A full-stack Human Resource Management System with secure authentication, multi-tenant data isolation, user management, attendance, leave, and ticket workflows.',
+      features: [
+        'JWT authentication system',
+        'Role-based access for Admin, Employee, and Global Admin',
+        'Multi-tenant company-based isolation',
+        'User management APIs under /api/users',
+        'Secure Spring Security backend with CORS configuration',
+        'Production deployment experience',
+      ],
+      stack: [
+        'Java',
+        'Spring Boot',
+        'Spring Security',
+        'JWT',
+        'MySQL',
+        'React',
+        'Vite',
+        'Axios',
+        'Docker',
+        'Docker Compose',
+        'GitHub Actions',
+        'Railway',
+        'Vercel',
+        'GCP',
+      ],
+    },
+    {
+      name: 'DevOps & CI/CD Pipeline Experience',
+      type: 'Engineering workflow',
+      description:
+        'Automated deployment workflows connecting GitHub, Dockerized services, and cloud platforms for consistent releases.',
+      features: [
+        'Automated backend deployment pipelines',
+        'GitHub workflow integration',
+        'Dockerized application environments',
+        'Docker Compose multi-service setup',
+      ],
+      stack: ['GitHub Actions', 'Docker', 'Docker Compose', 'Railway', 'GCP'],
+    },
+    {
+      name: 'Cloud Deployment Experience',
+      type: 'Production hosting',
+      description:
+        'Deployment experience across GCP, Railway, and Vercel, including environment variables and production configuration.',
+      features: [
+        'GCP deployment experience',
+        'Railway backend hosting for budget-aware deployments',
+        'Vercel frontend deployment',
+        'Production environment variable management',
+      ],
+      stack: ['GCP', 'Railway', 'Vercel', 'Environment variables'],
+    },
+  ],
+  repositories: [
+    {
+      name: 'crewsync',
+      visibility: 'Public',
+      description: 'Full-stack HRMS application built with React frontend and Spring Boot backend.',
+      language: 'React + Spring Boot',
+      url: 'https://github.com/Santoshyalawar-hub/crewsync',
+    },
+    {
+      name: 'Bloggie',
+      visibility: 'Public',
+      description: 'ASP.NET Core MVC blog application with admin panel, authentication, posts, and tags.',
+      language: 'C#',
+      url: 'https://github.com/Santoshyalawar-hub/Bloggie',
+    },
+    {
+      name: 'StudentProjectManagementSystem',
+      visibility: 'Public',
+      description: 'Student management app using Hibernate and MySQL for student, subject, and project data.',
+      language: 'Java',
+      url: 'https://github.com/Santoshyalawar-hub/StudentProjectManagementSystem',
+    },
+    {
+      name: 'Student_Registration_System',
+      visibility: 'Public',
+      description: 'Student registration system with Java, MySQL, JDBC, and CRUD operations.',
+      language: 'Java',
+      url: 'https://github.com/Santoshyalawar-hub/Student_Registration_System',
+    },
+  ],
+  flagship: {
+    name: 'CrewSync HRMS Platform',
+    label: 'Main project case study',
+    headline: 'CrewSync HRMS: a full-stack HR management platform with authentication, roles, and operational workflows.',
+    problem:
+      'HR teams need a secure way to manage employees, tickets, attendance, and leave while keeping company data isolated and access controlled.',
+    solution:
+      'Built a Spring Boot + React platform with JWT authentication, role-based access, multi-tenant company isolation, protected APIs, and a deployable frontend-backend architecture.',
+    outcome:
+      'The project shows practical full-stack experience: API design, authentication, CORS handling, deployment configuration, Docker workflows, and debugging real integration issues.',
+    modules: ['Auth & roles', 'Company tenancy', 'User APIs', 'Tickets', 'Attendance', 'Leave management'],
+    decisions: [
+      'JWT-based stateless authentication for API security.',
+      'Role-aware access paths for Admin, Employee, and Global Admin usage.',
+      'Company-based isolation to model SaaS multi-tenancy.',
+      'Docker Compose setup for repeatable local and deployment environments.',
+      'Separate Railway/Vercel deployment strategy to control hosting cost.',
+    ],
+    architecture: [
+      { layer: 'Client', detail: 'React, Vite, Axios, protected views' },
+      { layer: 'API', detail: 'Spring Boot REST controllers and service layer' },
+      { layer: 'Security', detail: 'JWT filters, Spring Security, RBAC, CORS' },
+      { layer: 'Data', detail: 'MySQL, JPA/Hibernate, tenant-aware records' },
+      { layer: 'Delivery', detail: 'Docker, Docker Compose, GitHub Actions, cloud deploys' },
+    ],
+  },
+  skillGroups: [
+    { title: 'Frontend', skills: ['React', 'Vite', 'JavaScript', 'Axios', 'React Router'] },
+    { title: 'Backend', skills: ['Java', 'Spring Boot', 'Spring Security', 'JWT Authentication', 'Hibernate / JPA'] },
+    { title: 'Database', skills: ['MySQL'] },
+    { title: 'DevOps / Tools', skills: ['Docker', 'Docker Compose', 'CI/CD pipelines', 'Git & GitHub', 'Postman API Testing'] },
+    { title: 'Cloud', skills: ['Google Cloud Platform', 'Railway', 'Vercel'] },
+  ],
+  journey: [
+    'Learned Java and backend fundamentals',
+    'Built REST APIs using Spring Boot',
+    'Integrated JWT authentication and security',
+    'Developed HRMS SaaS application',
+    'Learned Docker and containerization',
+    'Built CI/CD pipelines for automation',
+    'Deployed applications on GCP, Railway, and Vercel',
+    'Handled CORS, API failures, and deployment debugging',
+    'Gained 6 months of real-world full stack experience',
+  ],
+  workflows: [
+    { label: 'API layer', value: 'Spring Boot REST services secured with JWT and role policies' },
+    { label: 'Frontend layer', value: 'React + Vite UI integrated through Axios and production CORS rules' },
+    { label: 'Delivery layer', value: 'Dockerized services with CI/CD automation from GitHub' },
+    { label: 'Cloud layer', value: 'GCP, Railway, and Vercel deployments with environment configs' },
+  ],
+  conversion: [
+    'Can build secure REST APIs and integrate them with real frontends.',
+    'Understands production configuration, deployment failures, and CORS debugging.',
+    'Has practical exposure to Dockerized delivery and cloud-hosted applications.',
+  ],
+}
