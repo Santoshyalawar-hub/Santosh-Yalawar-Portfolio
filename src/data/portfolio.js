@@ -1,9 +1,9 @@
 export const portfolio = {
   person: {
     name: 'Santosh Yalawar',
-    role: 'Full Stack Developer',
-    specialty: 'Java + Spring Boot + React + DevOps',
-    experience: '6 months real project experience',
+    role: 'Java Full Stack Developer',
+    specialty: 'Java + Spring Boot + React + MySQL',
+    experience: '2 years hands-on project experience',
     location: 'India',
     email: 'santoshmyrohit@gmail.com',
     photoUrl: '',
@@ -12,12 +12,12 @@ export const portfolio = {
     resumeUrl: '#resume',
   },
   hero: {
-    eyebrow: 'Full Stack Developer',
-    title: 'Full Stack Developer building secure web applications.',
+    eyebrow: 'Java Full Stack Developer',
+    title: 'Java Full Stack Developer building secure, API-driven web applications.',
     summary:
-      '6 months of real project experience with Java, Spring Boot, React, REST APIs, JWT authentication, Docker, CI/CD, and cloud deployment.',
-    highlights: ['Spring Boot APIs', 'JWT security', 'React + Vite', 'Docker + CI/CD', 'GCP deployments'],
-    roles: ['Backend-focused Full Stack Developer', 'Spring Boot API Builder', 'React Product UI Developer', 'DevOps-aware Engineer'],
+      '2 years of focused hands-on experience building Java full-stack features with Spring Boot, React, REST APIs, JWT authentication, MySQL, Docker, CI/CD, and cloud deployment.',
+    highlights: ['Java + Spring Boot', 'REST API design', 'JWT security', 'React + Vite', 'MySQL + JPA', 'Docker deploys'],
+    roles: ['Java Full Stack Developer', 'Spring Boot API Developer', 'React Frontend Builder', 'Deployment-aware Engineer'],
     imageUrl: 'https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1600',
     imageCredit: 'Photo by olia danilevich on Pexels',
     flow: [
@@ -27,23 +27,23 @@ export const portfolio = {
     ],
   },
   stats: [
-    { value: '6 mo', label: 'Real project experience' },
+    { value: '2 yrs', label: 'Hands-on project experience' },
     { value: '3+', label: 'Cloud platforms used' },
     { value: '12+', label: 'Core technologies' },
-    { value: '1', label: 'Main full-stack project' },
+    { value: '1', label: 'Flagship Java full-stack project' },
   ],
   proofPoints: [
     {
       title: 'Secure backend systems',
-      text: 'Designed REST APIs with Spring Security, JWT authentication, role checks, and CORS rules for frontend-backend communication.',
+      text: 'Built Spring Boot REST APIs with Spring Security, JWT authentication, role checks, service-layer logic, and CORS rules for frontend-backend communication.',
     },
     {
       title: 'Product-minded frontend',
       text: 'Built React + Vite interfaces around real workflows such as user management, tickets, attendance, and leave operations.',
     },
     {
-      title: 'Deployment discipline',
-      text: 'Worked with Docker, Docker Compose, GitHub workflows, Railway, Vercel, and GCP-style production configuration.',
+      title: 'Recruiter-ready project proof',
+      text: 'Shows practical Java full-stack ability through public repositories, deployed workflow knowledge, debugging notes, and clear project architecture.',
     },
   ],
   homeOverview: [
@@ -62,21 +62,23 @@ export const portfolio = {
   ],
   projectTeaser: {
     title: 'Main project: CrewSync HRMS',
-    text: 'A full-stack HRMS platform covering authentication, roles, tenant isolation, users, tickets, attendance, and leave workflows.',
+    text: 'A Java full-stack HRMS platform covering authentication, roles, tenant isolation, users, tickets, attendance, and leave workflows.',
     linkText: 'Open project case study',
   },
   summary: [
-    'Strong backend expertise in Java, Spring Boot, REST APIs, Spring Security, and JWT authentication.',
-    'Skilled in frontend development using React, Vite, Axios, and API integration workflows.',
-    'Hands-on experience with Docker, Docker Compose, CI/CD pipelines, Git, GitHub, Postman, GCP, Railway, and Vercel.',
+    'Java full-stack developer with practical backend exposure in Spring Boot, REST APIs, Spring Security, JWT authentication, JPA/Hibernate, and MySQL.',
+    'Skilled in frontend development using React, Vite, Axios, routing, protected screens, and API integration workflows.',
+    'Hands-on exposure to Docker, Docker Compose, CI/CD pipelines, Git, GitHub, Postman, GCP, Railway, and Vercel.',
     'Comfortable debugging production issues including CORS errors, deployment failures, environment variables, and API failures.',
   ],
   experience: {
-    title: 'Full Stack Developer',
-    meta: '6 months experience',
+    title: 'Java Full Stack Developer',
+    meta: '2 years experience',
     responsibilities: [
-      'Built and deployed full-stack applications using Spring Boot and React.',
-      'Designed and implemented RESTful APIs with JWT authentication and role-based access control.',
+      'Built Java full-stack features using Spring Boot, React, MySQL, and REST API architecture.',
+      'Designed and implemented RESTful APIs with JWT authentication, role-based access control, and Spring Security.',
+      'Created React + Vite screens connected to backend APIs through Axios and protected route flows.',
+      'Worked with JPA/Hibernate entities, repositories, service layers, and MySQL-backed data models.',
       'Used Docker and Docker Compose for containerized development and deployment workflows.',
       'Created CI/CD pipelines for automated build and deployment.',
       'Tested APIs using Postman and used Git/GitHub for version control and collaboration.',
@@ -89,13 +91,14 @@ export const portfolio = {
       name: 'CrewSync HRMS Platform',
       type: 'Main project',
       description:
-        'A full-stack Human Resource Management System with secure authentication, multi-tenant data isolation, user management, attendance, leave, and ticket workflows.',
+        'A Java full-stack Human Resource Management System with secure authentication, multi-tenant data isolation, user management, attendance, leave, and ticket workflows.',
       features: [
         'JWT authentication system',
         'Role-based access for Admin, Employee, and Global Admin',
         'Multi-tenant company-based isolation',
         'User management APIs under /api/users',
-        'Secure Spring Security backend with CORS configuration',
+        'Spring Boot service layer, JPA/Hibernate persistence, and MySQL integration',
+        'Secure Spring Security backend with production CORS configuration',
         'Production deployment experience',
       ],
       stack: [
@@ -114,6 +117,20 @@ export const portfolio = {
         'Vercel',
         'GCP',
       ],
+    },
+    {
+      name: 'Nexora Hub',
+      type: 'Collaborative platform',
+      description:
+        'A large community-driven platform where developers without company experience can contribute, build real features, and showcase their skills through open project work.',
+      features: [
+        'Open contribution workflow for developers to practice real collaboration',
+        'Skill showcase space for frontend, backend, full-stack, and DevOps contributors',
+        'Project modules designed for learning through practical feature development',
+        'GitHub-based collaboration with issues, pull requests, and code review practice',
+        'Built to help freshers and self-taught developers prove ability through contribution',
+      ],
+      stack: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST APIs', 'GitHub', 'Open Source Collaboration'],
     },
     {
       name: 'DevOps & CI/CD Pipeline Experience',
@@ -158,18 +175,12 @@ export const portfolio = {
       url: 'https://github.com/Santoshyalawar-hub/Bloggie',
     },
     {
-      name: 'StudentProjectManagementSystem',
+      name: 'Nexora Hub',
       visibility: 'Public',
-      description: 'Student management app using Hibernate and MySQL for student, subject, and project data.',
-      language: 'Java',
-      url: 'https://github.com/Santoshyalawar-hub/StudentProjectManagementSystem',
-    },
-    {
-      name: 'Student_Registration_System',
-      visibility: 'Public',
-      description: 'Student registration system with Java, MySQL, JDBC, and CRUD operations.',
-      language: 'Java',
-      url: 'https://github.com/Santoshyalawar-hub/Student_Registration_System',
+      description:
+        'Big collaborative platform for developers to contribute, gain practical project knowledge, and showcase skills through real feature work.',
+      language: 'Java + Spring Boot + React',
+      url: 'https://github.com/Santoshyalawar-hub/NexoraHub',
     },
   ],
   flagship: {
@@ -181,7 +192,7 @@ export const portfolio = {
     solution:
       'Built a Spring Boot + React platform with JWT authentication, role-based access, multi-tenant company isolation, protected APIs, and a deployable frontend-backend architecture.',
     outcome:
-      'The project shows practical full-stack experience: API design, authentication, CORS handling, deployment configuration, Docker workflows, and debugging real integration issues.',
+      'The project shows practical Java full-stack experience: API design, authentication, JPA/Hibernate persistence, CORS handling, deployment configuration, Docker workflows, and debugging real integration issues.',
     modules: ['Auth & roles', 'Company tenancy', 'User APIs', 'Tickets', 'Attendance', 'Leave management'],
     decisions: [
       'JWT-based stateless authentication for API security.',
@@ -209,12 +220,13 @@ export const portfolio = {
     'Learned Java and backend fundamentals',
     'Built REST APIs using Spring Boot',
     'Integrated JWT authentication and security',
-    'Developed HRMS SaaS application',
+    'Developed Java full-stack HRMS SaaS application',
+    'Connected React screens with Spring Boot APIs',
     'Learned Docker and containerization',
     'Built CI/CD pipelines for automation',
     'Deployed applications on GCP, Railway, and Vercel',
     'Handled CORS, API failures, and deployment debugging',
-    'Gained 6 months of real-world full stack experience',
+    'Gained 2 years of hands-on Java full-stack project experience',
   ],
   workflows: [
     { label: 'API layer', value: 'Spring Boot REST services secured with JWT and role policies' },
@@ -223,8 +235,8 @@ export const portfolio = {
     { label: 'Cloud layer', value: 'GCP, Railway, and Vercel deployments with environment configs' },
   ],
   conversion: [
-    'Can build secure REST APIs and integrate them with real frontends.',
-    'Understands production configuration, deployment failures, and CORS debugging.',
-    'Has practical exposure to Dockerized delivery and cloud-hosted applications.',
+    'Can build Spring Boot REST APIs and integrate them with React frontends.',
+    'Understands Java, MySQL, JWT security, production configuration, deployment failures, and CORS debugging.',
+    'Has practical project proof through CrewSync, public repositories, Dockerized delivery, and cloud-hosted workflows.',
   ],
 }

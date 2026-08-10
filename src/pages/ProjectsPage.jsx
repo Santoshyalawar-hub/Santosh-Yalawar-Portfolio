@@ -15,7 +15,7 @@ const ProjectsPage = () => (
       <SectionHeader
         eyebrow="Projects"
         title="Project work"
-        description="Valid project and repository details focused on full-stack development, deployment, and backend practice."
+        description="Project and repository details focused on Java full-stack development, Spring Boot APIs, React integration, deployment, and backend practice."
       />
       <div className="project-hero-panel">
         <span>Main project</span>
@@ -30,7 +30,7 @@ const ProjectsPage = () => (
       <SectionHeader
         eyebrow="Related work"
         title="DevOps and deployment exposure"
-        description="Supporting experience connected to build, deployment, Docker, and cloud configuration."
+        description="Supporting hands-on exposure connected to builds, deployment, Docker, and cloud configuration."
       />
       <div className="supporting-grid">
         {supportingProjects.map((project, index) => {

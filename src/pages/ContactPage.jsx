@@ -12,8 +12,8 @@ const ContactPage = () => {
       <section className="page-hero contact-hero">
         <SectionHeader
           eyebrow="Contact"
-          title="Let us talk about full-stack engineering roles"
-          description={`${person.name} brings Java, Spring Boot, React, DevOps awareness, and production debugging experience into software engineering interviews.`}
+          title="Ready to discuss Java full-stack developer roles"
+          description={`${person.name} brings Java, Spring Boot, React, MySQL, REST API, DevOps awareness, and practical project debugging experience into software engineering interviews.`}
         />
         <motion.div className="contact-card" whileHover={{ y: -8 }}>
           <a href={`mailto:${person.email}`}>
@@ -40,7 +40,7 @@ const ContactPage = () => {
           <SectionHeader
             eyebrow="Interview fit"
             title="What a recruiter can verify quickly"
-            description="The portfolio is designed to make these signals clear without forcing someone to dig."
+            description="The portfolio is designed so recruiters can quickly verify project work, technical fit, GitHub code, and contact details."
           />
           <div className="conversion-grid">
             {conversion.map((item) => (

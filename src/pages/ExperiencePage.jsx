@@ -12,8 +12,8 @@ const ExperiencePage = () => {
       <section className="page-hero experience-hero">
         <SectionHeader
           eyebrow="Professional experience"
-          title="Six months of real full-stack project delivery"
-          description="Focused on building, integrating, deploying, and debugging a real HRMS platform rather than only completing tutorial-style features."
+          title="Two years of focused Java full-stack project delivery"
+          description="Focused on building, integrating, deploying, and debugging a real HRMS platform with Java, Spring Boot, React, MySQL, and production-style workflows."
         />
         <div className="terminal-card" aria-label="Delivery signals">
           {['git push origin main', 'docker compose up', 'jwt token verified', 'cors policy resolved', 'deployment health checked'].map((line) => (
@@ -29,7 +29,7 @@ const ExperiencePage = () => {
         <SectionHeader
           eyebrow={experience.meta}
           title={experience.title}
-          description="The responsibilities below are framed around the kind of work expected inside a production engineering team."
+          description="The responsibilities below show practical readiness for junior Java full-stack developer roles."
         />
         <ul className="check-list feature-list">
           {experience.responsibilities.map((item, index) => (

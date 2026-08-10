@@ -86,7 +86,7 @@ const HomePage = () => {
         <SectionHeader
           eyebrow="Portfolio overview"
           title="What this portfolio represents"
-          description="A concise view of the skills and real project exposure relevant for full-stack developer opportunities."
+          description="A concise view of the Java full-stack skills, project evidence, and delivery exposure relevant for developer opportunities."
         />
         <div className="proof-grid">
           {homeOverview.map((item, index) => (
@@ -122,8 +122,8 @@ const HomePage = () => {
       <section className="content-section conversion-section">
         <SectionHeader
           eyebrow="Job readiness"
-          title="Why this profile is relevant for full-stack roles"
-          description="Clear, realistic signals for entry-level or junior full-stack developer opportunities."
+          title="Why this profile is relevant for Java full-stack roles"
+          description="Clear, realistic signals for entry-level or junior Java full-stack developer opportunities."
         />
         <div className="conversion-grid">
           {conversion.map((item) => (

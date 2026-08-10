@@ -67,9 +67,9 @@ select {
 }
 
 main {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  border-inline: 1px solid var(--border);
+  width: 100%;
+  min-height: 100svh;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 30rem),
     var(--bg);
