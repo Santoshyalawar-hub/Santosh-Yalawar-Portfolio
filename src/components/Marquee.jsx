@@ -1,0 +1,4 @@
+export default function Marquee({ items }) {
+  const row = [...items, ...items]
+  return <div className="marquee" aria-hidden="true"><div className="track">{row.map((t, i) => <span key={i}>{t}</span>)}</div></div>
+}

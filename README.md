@@ -1,45 +1,20 @@
-# Developer Portfolio
+# Santosh Yalawar: Portfolio
 
-Recruiter-ready portfolio website built with React and Vite.
+React 19 + Vite multi-page portfolio (Home, About, Experience, Skills, Projects, Project detail, Architecture, Contact) with dark/light theme and a lazy-loaded 3D hero (Three.js / React Three Fiber).
 
-## Content Updates
-
-Portfolio values are centralized in `src/data/portfolio.js`. Update that file to change profile details, stats, projects, skills, journey items, workflow notes, and contact links.
-
-## Structure
-
-- `src/App.jsx` defines the React Router routes.
-- `src/components` contains shared layout, chips, section headers, page motion, role rotation, and the CrewSync case study.
-- `src/pages` contains separate JSX pages for home, projects, skills, experience, and contact.
-- `src/data/portfolio.js` contains the professional story, proof points, project architecture, technical decisions, and recruiter conversion content.
-
-## Media
-
-- Set `person.photoUrl` in `src/data/portfolio.js` only if you want to add your real profile image.
+## Update content (edit only `src/data/*`)
+- `profile.js`: name, role, tagline, email, resume path, social links, About text, education
+- `experience.js`: add an object to add a job; set `company` when you want it shown
+- `skills.js`: `u('Name')` = used in projects, `l('Name')` = upskilled
+- `projects.js`: add one object = new card + detail page (`status`: implemented / in-progress / planned; `confidential: true` shows the confidentiality note)
+- `architecture.js`: edit nodes/edges of each diagram. Keep company projects generalized.
+- Resume: put your PDF at `public/resume.pdf`
+- Search the code for `TODO` for items still to confirm.
 
 ## Commands
+`npm install`, `npm run dev`, `npm run build`, `npm run lint`
 
-```bash
-npm run dev
-npm run build
-npm run lint
-```
+Deploy: Vercel (`vercel.json`) or Docker (`docker build -t portfolio . && docker run -p 8080:80 portfolio`).
 
-## Vercel Deployment
-
-Use these settings:
-
-- Framework Preset: `Vite`
-- Build Command: `npm run build`
-- Output Directory: `dist`
-
-`vercel.json` is included so direct routes such as `/projects` and `/contact` load correctly.
-
-## Docker
-
-```bash
-docker build -t portfolio .
-docker run --rm -p 8080:80 portfolio
-```
-
-Open `http://localhost:8080`.
+## Roadmap / upcoming projects
+Edit `src/data/roadmap.js`: each object appears on Home and at the bottom of Projects (phase: Now / Next / Upskilling).
