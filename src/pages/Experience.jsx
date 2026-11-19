@@ -4,7 +4,7 @@ import { projects } from '../data/projects'
 import { Head, Chips, Tilt } from '../components/ui'
 export default function Experience() {
   return (<div className="wrap page">
-    <Head eyebrow="Experience" title="Professional timeline" text="Verified responsibilities only." />
+    <Head eyebrow="Experience" title="Hands-on experience" text="Practical skills demonstrated through end-to-end projects." />
     <div className="stack">{experience.map((x) => (
       <div className="tl" key={x.title}><Tilt>
         <div className="row"><h3>{x.title}{x.company && ` · ${x.company}`}</h3><span className="pill">{x.type} · {x.duration}</span></div>

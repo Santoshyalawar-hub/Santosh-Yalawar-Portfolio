@@ -85,9 +85,9 @@ export default function Home() {
           </div>
           <Tilt className="stat b-s1">
             <strong className="grad">
-              <CountUp to={1} /> yr
+              <CountUp to={2} />
             </strong>
-            Professional experience
+            End-to-end project builds
           </Tilt>
           <Tilt className="stat b-s2">
             <strong className="grad">

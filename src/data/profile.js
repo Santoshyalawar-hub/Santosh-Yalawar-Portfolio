@@ -3,7 +3,7 @@ export const profile = {
   name: 'Santosh Yalawar',
   role: 'Java Full Stack Developer',
   roles: ['Java Full Stack Developer', 'Spring Boot API Developer', 'React Frontend Builder', 'Microservices & Kafka Upskilling'],
-  tagline: '1 year of hands-on experience building secure, API-driven full-stack applications with Java, Spring Boot, React and MySQL.',
+  tagline: 'Aspiring Java full stack developer with strong hands-on experience building secure, API-driven applications with Java, Spring Boot, React and MySQL.',
   email: 'santoshmyrohit@gmail.com',
   location: 'India',
   availability: 'Open to Java full stack opportunities',
@@ -20,7 +20,7 @@ export const nav = [
 ]
 export const about = {
   paragraphs: [
-    'Java full stack developer with 1 year of experience, focused on Spring Boot, REST APIs, JWT-based security, JPA/Hibernate and relational databases.',
+    'Aspiring Java full stack developer with strong hands-on experience in Spring Boot, REST APIs, JWT-based security, JPA/Hibernate and relational databases.',
     'I built and deployed SamayaHR, a multi-tenant HR platform, end to end. I have since upskilled in microservices, Apache Kafka, Redis, PostgreSQL and monitoring, and I am applying it on a professional event-driven project.',
     'I debug real integration problems: CORS, deployment failures, environment configuration and API defects.',
   ],

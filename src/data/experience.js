@@ -3,8 +3,8 @@ export const experience = [
   {
     company: '', // TODO: add when you want it shown
     title: 'Java Full Stack Developer',
-    type: 'Professional',
-    duration: '1 year',
+    type: 'Hands-on',
+    duration: 'Project-based',
     responsibilities: [
       'Built Java full-stack features with Spring Boot, React, MySQL and REST API architecture.',
       'Implemented JWT authentication, role-based access control and Spring Security.',
