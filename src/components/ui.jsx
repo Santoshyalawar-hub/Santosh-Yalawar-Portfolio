@@ -23,9 +23,16 @@ export const Tilt = ({ children, className = '', as: T = 'div', ...rest }) => {
 export const Thumb = ({ p }) => {
   const h = [...p.id].reduce((a, c) => a + c.charCodeAt(0), 0) % 360
   return (
-    <div className="thumb" style={{ '--h': h }} aria-hidden="true">
-      <span className="thumb-name">{p.name}</span>
-      {p.stack.slice(0, 4).map((t, i) => <em key={t} style={{ '--i': i }}>{t}</em>)}
+    <div className={`thumb thumb-${p.id}`} style={{ '--h': h }} aria-hidden="true">
+      <div className="thumb-chrome"><span className="thumb-lights"><i /><i /><i /></span><span>{p.subtitle}</span><b>↗</b></div>
+      <div className="thumb-art">
+        {p.id === 'samayahr' && <><div className="art-sidebar"><i /><i /><i /><i /></div><div className="art-dashboard"><small>PEOPLE OVERVIEW</small><strong>Team dashboard</strong><div className="art-metrics"><i><b>248</b><small>Employees</small></i><i><b>12</b><small>On leave</small></i></div><div className="art-bars"><i /><i /><i /><i /><i /><i /><i /></div></div></>}
+        {p.id === 'fraudshield' && <><div className="art-orb"><i /><i /><i /></div><div className="art-feed"><small>TRANSACTION STREAM</small><i><b>₹ 24,500</b><em>ALLOW</em></i><i><b>₹ 8,200</b><em>REVIEW</em></i><i><b>₹ 1,840</b><em>ALLOW</em></i></div></>}
+        {p.id === 'medcore' && <><div className="art-patient"><i className="art-avatar">+</i><small>PATIENT OVERVIEW</small><strong>Health dashboard</strong><div className="art-vitals"><i><b>98.6°</b><small>Temperature</small></i><i><b>72 bpm</b><small>Heart rate</small></i></div></div><div className="art-pulse"><i /><i /><i /><i /><i /><i /><i /></div></>}
+        {p.id === 'nexora' && <><div className="art-network"><i className="art-node">SY</i><i className="art-node">JD</i><i className="art-node">AK</i><i className="art-node">+</i><svg viewBox="0 0 240 100"><path d="M35 50 108 24 195 46M35 50 115 78 195 46" /></svg></div><div className="art-community"><small>BUILD TOGETHER</small><strong>Ideas become impact.</strong><span>12 contributors online</span></div></>}
+        {!['samayahr', 'fraudshield', 'medcore', 'nexora'].includes(p.id) && <><div className="art-orb"><i /><i /><i /></div><div className="art-feed"><small>PROJECT OVERVIEW</small><strong>{p.name}</strong><i><b>{p.stack[0]}</b><em>ACTIVE</em></i><i><b>{p.stack[1]}</b><em>READY</em></i></div></>}
+      </div>
+      <div className="thumb-footer"><span className="thumb-name">{p.name}</span><span>{p.stack.slice(0, 2).join(' · ')}</span></div>
     </div>
   )
 }

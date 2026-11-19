@@ -19,10 +19,3 @@ Deploy: Vercel (`vercel.json`) or Docker (`docker build -t portfolio . && docker
 ## Roadmap / upcoming projects
 Edit `src/data/roadmap.js`: each object appears on Home and at the bottom of Projects (phase: Now / Next / Upskilling).
 
-## Contact form email (Vercel)
-The contact form sends through Gmail SMTP using the serverless function at `api/contact.js`. In Vercel, add these environment variables under **Project Settings → Environment Variables**, then redeploy:
-- `SMTP_USER`: Gmail address used to send messages
-- `SMTP_PASS`: a Gmail App Password (not your regular Gmail password)
-- `CONTACT_TO`: address that should receive contact form messages
-
-Keep these values in Vercel environment variables. Do not commit them or add them to `VITE_*` variables, which are exposed to the browser. For local development, use `.env.local` based on `.env.example` and run `vercel dev` so the API function is available.
