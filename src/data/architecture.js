@@ -34,4 +34,30 @@ const samaya = {
   ],
   edges: [['react', 'filter'], ['filter', 'api'], ['api', 'jpa'], ['jpa', 'mysql']],
 }
-export const diagrams = [samaya, fraud]
+const persona = {
+  id: 'personaai', title: 'PersonaAI: multi-tenant AI assistant',
+  nodes: [
+    { id: 'visitor', name: 'Website Visitor', x: 7, y: 15, status: 'planned', does: 'Asks questions through a customer website.', apis: [], produces: [], consumes: [], owns: '-', deps: ['widget'] },
+    { id: 'widget', name: 'Chat Widget (JS embed)', x: 24, y: 15, status: 'planned', does: 'Embeddable JavaScript chat widget for portfolio and company websites.', apis: ['Widget embed script'], produces: [], consumes: [], owns: '-', deps: ['gateway'] },
+    { id: 'gateway', name: 'API Gateway', x: 42, y: 15, status: 'planned', core: true, does: 'Checks API keys, domain allowlists and rate limits.', apis: ['POST /api/chat'], produces: [], consumes: [], owns: 'tenant API keys', deps: ['chat', 'kafka'] },
+    { id: 'chat', name: 'Chat Service', x: 60, y: 15, status: 'planned', core: true, does: 'Orchestrates tenant-scoped retrieval, guardrails and streamed assistant responses.', apis: ['POST /api/chat'], produces: ['conversation events'], consumes: [], owns: 'conversation context', deps: ['guardrails', 'retriever', 'llm', 'redis', 'postgres', 'analytics'] },
+    { id: 'guardrails', name: 'Guardrails', x: 79, y: 7, status: 'planned', does: 'Filters prompt injection attempts and redacts personally identifiable information.', apis: [], produces: [], consumes: [], owns: 'safety policies', deps: [] },
+    { id: 'llm', name: 'LLM Provider', x: 94, y: 15, status: 'planned', does: 'Generates grounded answers through Claude or OpenAI.', apis: ['Claude / OpenAI API'], produces: [], consumes: [], owns: '-', deps: [] },
+    { id: 'retriever', name: 'Retriever', x: 78, y: 32, status: 'planned', does: 'Retrieves relevant chunks scoped to the active tenant and returns source citations.', apis: [], produces: [], consumes: [], owns: '-', deps: ['vector'] },
+    { id: 'vector', name: 'Vector DB (pgvector)', x: 94, y: 39, status: 'planned', core: true, does: 'Stores tenant-scoped document embeddings for semantic search.', apis: [], produces: [], consumes: [], owns: 'document vectors', deps: [] },
+    { id: 'redis', name: 'Redis', x: 78, y: 55, status: 'planned', does: 'Caches common responses and tracks rate limits.', apis: [], produces: [], consumes: [], owns: 'cache and counters', deps: [] },
+    { id: 'postgres', name: 'PostgreSQL', x: 59, y: 55, status: 'planned', does: 'Stores tenants, conversations, sources and configuration.', apis: [], produces: [], consumes: [], owns: 'tenant and conversation records', deps: [] },
+    { id: 'analytics', name: 'Analytics & Audit', x: 95, y: 59, status: 'planned', does: 'Records usage, feedback and auditable assistant activity.', apis: [], produces: [], consumes: ['conversation events'], owns: 'usage and audit records', deps: [] },
+    { id: 'admin', name: 'Tenant Admin Dashboard', x: 8, y: 80, status: 'planned', does: 'Lets each tenant manage sources, domains, leads and analytics.', apis: ['Admin APIs'], produces: ['document upload events'], consumes: [], owns: '-', deps: ['gateway', 'kafka'] },
+    { id: 'kafka', name: 'Apache Kafka', x: 30, y: 80, status: 'planned', core: true, does: 'Queues document ingestion events for asynchronous processing.', apis: [], produces: [], consumes: ['document upload events'], owns: 'ingestion topics', deps: ['ingestion'] },
+    { id: 'ingestion', name: 'Ingestion Service', x: 51, y: 80, status: 'planned', does: 'Parses and chunks tenant documents and URLs before embedding.', apis: [], produces: ['document chunks'], consumes: ['document upload events'], owns: 'ingestion jobs', deps: ['embedding'] },
+    { id: 'embedding', name: 'Embedding Model', x: 72, y: 80, status: 'planned', does: 'Converts document chunks into vectors for semantic retrieval.', apis: ['Embedding API'], produces: ['document vectors'], consumes: ['document chunks'], owns: '-', deps: ['vector'] },
+  ],
+  edges: [
+    ['visitor', 'widget'], ['widget', 'gateway'], ['gateway', 'chat'], ['chat', 'guardrails'],
+    ['chat', 'retriever'], ['retriever', 'vector'], ['chat', 'llm'], ['chat', 'redis'],
+    ['chat', 'postgres'], ['admin', 'gateway'], ['admin', 'kafka'], ['kafka', 'ingestion'],
+    ['ingestion', 'embedding'], ['embedding', 'vector'], ['chat', 'analytics'],
+  ],
+}
+export const diagrams = [samaya, fraud, persona]

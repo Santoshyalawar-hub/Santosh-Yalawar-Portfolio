@@ -8,7 +8,7 @@ export default function Projects() {
   const list = projects.filter((p) => f === 'all' || p.status === f)
   return (<div className="wrap page">
     <Head eyebrow="Projects" title="Selected work" text="Each project shows its real implementation status." />
-    <div className="seg">{['all', 'implemented', 'in-progress'].map((s) => <button key={s} className={`btn ${f === s ? 'on' : ''}`} onClick={() => setF(s)}>{s}</button>)}</div>
+    <div className="seg">{['all', 'implemented', 'in-progress', 'planned'].map((s) => <button key={s} className={`btn ${f === s ? 'on' : ''}`} onClick={() => setF(s)}>{s}</button>)}</div>
     <div className="grid">{list.map((p) => (
       <Tilt as={Link} to={`/projects/${p.id}`} key={p.id}>
         <Thumb p={p} />
