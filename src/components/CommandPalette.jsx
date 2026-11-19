@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import { nav } from '../data/profile'
 import { projects } from '../data/projects'
-const all = [...nav.map(([id, l]) => ({ label: l, hint: 'Page', to: id === 'home' ? '/' : `/${id}` })), ...projects.map((p) => ({ label: p.name, hint: 'Project', to: `/projects/${p.id}` }))]
+import { skillCategories } from '../data/skills'
+const all = [...nav.map(([id, l]) => ({ label: l, hint: 'Page', to: id === 'home' ? '/' : `/${id}` })), ...projects.map((p) => ({ label: p.name, hint: 'Project', to: `/projects/${p.id}` })), ...skillCategories.flatMap((c) => c.items.map((s) => ({ label: s.name, hint: `Skill · ${s.level}`, to: '/skills' })))]
 export default function CommandPalette({ open, setOpen }) {
   const [q, setQ] = useState(''), [i, setI] = useState(0), go = useNavigate(), ref = useRef(null)
   useEffect(() => { if (open) ref.current?.focus() }, [open])

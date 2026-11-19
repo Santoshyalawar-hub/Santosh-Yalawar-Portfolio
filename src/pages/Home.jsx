@@ -12,7 +12,7 @@ import Roadmap from "../components/Roadmap";
 import { Tilt, Thumb, Badge, Reveal, Logo, CountUp } from "../components/ui";
 const floaters = ["Java", "Spring Boot", "React", "Kafka", "Docker", "MySQL"];
 const all = skillCategories.flatMap((c) => c.items);
-const used = all.filter((s) => s.level === "used");
+const used = all.filter((s) => s.proof.length > 0);
 export default function Home() {
   const { theme } = useOutletContext();
   const role = useRotator(profile.roles);
