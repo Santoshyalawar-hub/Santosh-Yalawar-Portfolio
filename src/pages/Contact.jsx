@@ -28,7 +28,7 @@ export default function Contact() {
     <div className="two">
       <Tilt><form onSubmit={submit} noValidate>{F({ k: 'name', label: 'Name' })}{F({ k: 'email', label: 'Email' })}{F({ k: 'subject', label: 'Subject' })}{F({ k: 'message', label: 'Message', area: true })}
         <button className="btn p" type="submit"><Mail size={16} />Send message</button>
-        {state === 'ok' && <p className="ok" role="status">Opening your email app to send the message.</p>}{state === 'fail' && <p className="err" role="alert">Could not send. Please email me directly.</p>}</form></Tilt>
+        {state === 'ok' && <p className="ok" role="status">Message sent successfully. Thank you for reaching out.</p>}{state === 'fail' && <p className="err" role="alert">Could not send your message. Please email me directly.</p>}</form></Tilt>
       <Tilt className="stack"><h3>Direct</h3><a href={`mailto:${profile.email}`}>{profile.email}</a><button className="btn" type="button" onClick={copy}><Copy size={14} />Copy email</button><p>{profile.location}</p>{socialLinks.map((s) => <a key={s.label} href={s.href} target="_blank" rel="noreferrer">{s.label} ↗</a>)}</Tilt>
     </div>
     <AnimatePresence>{toast && <motion.div className="toast" role="status" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>{toast}</motion.div>}</AnimatePresence>

@@ -1,7 +1,14 @@
-import { profile } from '../data/profile'
-// Swap this body for fetch('/api/contact') or an email service later. Never put secrets in frontend code.
-export async function sendMessage({ name, email, subject, message }) {
-  const body = encodeURIComponent(`${message}\n\n- ${name} (${email})`)
-  window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${body}`
-  return { ok: true }
+export async function sendMessage(payload) {
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
+
+  if (!response.ok) {
+    const result = await response.json().catch(() => ({}))
+    throw new Error(result.error || 'Message could not be sent.')
+  }
+
+  return response.json()
 }
