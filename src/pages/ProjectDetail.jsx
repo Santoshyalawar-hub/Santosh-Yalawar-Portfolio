@@ -18,7 +18,7 @@ export default function ProjectDetail() {
   const p = projects.find((x) => x.id === id)
   const d = diagrams.find((x) => x.id === id)
   const [sel, setSel] = useState(null)
-  const secs = p ? [['overview', 'Overview'], p.problem && ['problem', 'Problem & solution'], ['features', 'Features'], p.decisions && ['decisions', 'Decisions'], p.challenge && ['challenge', 'Challenge'], d && ['architecture', 'Architecture'], p.screenshots?.length && ['gallery', 'Screenshots'], ['stack', 'Stack']].filter(Boolean) : []
+  const secs = p ? [['overview', 'Overview'], p.problem && ['problem', 'Problem & solution'], ['features', 'Features'], p.decisions && ['decisions', 'Decisions'], p.challenge && ['challenge', 'Challenge'], p.learning && ['learning', 'Learning'], d && ['architecture', 'Architecture'], p.screenshots?.length && ['gallery', 'Screenshots'], ['stack', 'Stack']].filter(Boolean) : []
   const active = useSpy(secs.map((s) => s[0]))
   if (!p) return <Navigate to="/projects" replace />
   const done = p.features.filter((f) => f.status === 'implemented').length
@@ -41,7 +41,8 @@ export default function ProjectDetail() {
         <Sec id="features" title="Features & status"><div className="glass"><ul className="ck" style={{ listStyle: 'none', padding: 0 }}>{p.features.map((f) => <li key={f.text} className="row"><span>{f.text}</span><Badge status={f.status} /></li>)}</ul></div></Sec>
         {p.decisions && <Sec id="decisions" title="Technical decisions"><div className="grid">{p.decisions.map((x, i) => <Tilt key={x}><span className="eyebrow">0{i + 1}</span><p>{x}</p></Tilt>)}</div></Sec>}
         {p.challenge && <Sec id="challenge" title="A problem I solved"><div className="two"><Tilt><span className="eyebrow">Issue</span><p>{p.challenge.issue}</p></Tilt><Tilt><span className="eyebrow">Fix</span><p>{p.challenge.fix}</p></Tilt></div></Sec>}
-        {d && <Sec id="architecture" title="Architecture"><Diagram key={d.id} nodes={d.nodes} edges={d.edges} selected={sel} onSelect={setSel} />{node && <div className="glass" style={{ marginTop: 14 }}><div className="row"><h3>{node.name}</h3><Badge status={node.status} /></div><p>{node.does}</p></div>}<Link className="btn" style={{ marginTop: 14 }} to={`/architecture?d=${p.id}`}>Full interactive view →</Link></Sec>}
+        {p.learning && <Sec id="learning" title="What I'm learning for this project"><div className="glass"><ul className="ck">{p.learning.map((x) => <li key={x} className="learning-row"><span>{x}</span><span className="pill learning-label">Learning</span></li>)}</ul><h3 style={{ marginTop: 24 }}>Learning path</h3><ol className="learning-path"><li>Embeddings and vector search</li><li>Basic RAG chatbot on my own resume</li><li>Multi-tenant ingestion with Kafka</li><li>Guardrails and evaluation</li><li>Embeddable widget and dashboard</li></ol></div></Sec>}
+        {d && <Sec id="architecture" title="Architecture"><Diagram key={d.id} id={d.id} nodes={d.nodes} edges={d.edges} selected={sel} onSelect={setSel} />{node && <div className="glass" style={{ marginTop: 14 }}><div className="row"><h3>{node.name}</h3><Badge status={node.status} /></div><p>{node.does}</p></div>}<Link className="btn" style={{ marginTop: 14 }} to={`/architecture?d=${p.id}`}>Full interactive view →</Link></Sec>}
         {p.screenshots?.length > 0 && <Sec id="gallery" title="Screenshots"><div className="grid">{p.screenshots.map((s) => <div className="frame" key={s}><div className="term-bar"><i /><i /><i /></div><img src={s} alt={`${p.name} screenshot`} loading="lazy" /></div>)}</div></Sec>}
         <Sec id="stack" title="Tech stack"><Chips items={p.stack} /></Sec>
       </div>

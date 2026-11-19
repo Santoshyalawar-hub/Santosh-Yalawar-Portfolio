@@ -4,5 +4,6 @@ export const roadmap = [
   { phase: 'Now', title: 'FraudShield', status: 'in-progress', text: 'Applying Kafka, event-driven design and microservices on a professional project.', tags: ['Kafka', 'Microservices', 'PostgreSQL', 'Redis'], link: '/projects/fraudshield' },
   { phase: 'Next', title: 'PersonaAI', status: 'planned', text: "Embeddable AI assistant for any portfolio or company website, answering only from the owner's own data using RAG.", tags: ['Spring Boot', 'Spring AI', 'pgvector', 'Redis', 'Kafka', 'LLM'], link: '/projects/personaai' },
   { phase: 'Next', title: 'MedCore backend', status: 'planned', text: 'Spring Boot APIs, authentication and persistence behind the existing hospital UI.', tags: ['Spring Boot', 'MySQL', 'JWT'], link: '/projects/medcore' },
+  { phase: 'Next', title: 'PayFlow', status: 'planned', text: 'Secure payment gateway with idempotent payments, signed webhooks, refunds and a merchant dashboard.', tags: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Kafka', 'Docker'], link: '/projects/payflow' },
   { phase: 'Upskilling', title: 'Observability', status: 'planned', text: 'Metrics, dashboards and structured logging for backend services.', tags: ['Prometheus', 'Grafana', 'Logback'] },
 ]

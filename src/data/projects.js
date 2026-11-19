@@ -25,7 +25,7 @@ export const projects = [
   {
     id: 'personaai', name: 'PersonaAI', subtitle: 'Multi-tenant AI assistant platform',
     description: "Add an AI assistant to any website with one script tag, trained on the owner's own data and nothing else.",
-    stack: ['Spring Boot', 'Spring AI', 'pgvector', 'Redis', 'Kafka', 'LLM'],
+    stack: ['Spring Boot', 'Spring AI', 'pgvector', 'Redis', 'Kafka', 'LLM', 'ML', 'RAG', 'Embeddings', 'LangChain4j', 'Python'],
     status: 'planned',
     contribution: 'Planned multi-tenant AI assistant platform architecture and capabilities.',
     problem: 'Website owners need an assistant that can answer questions from their own trusted content while keeping each tenant’s data isolated.',
@@ -47,6 +47,28 @@ export const projects = [
       fix: 'Planned design uses tenant-scoped retrieval, source citations, guardrails, queued ingestion, streamed responses and usage controls.',
     },
     github: '', demo: '', linksDisabled: true,
+    learning: [
+      'ML basics: embeddings, vector similarity (cosine), transformers and LLMs at a high level',
+      'LLM usage: prompt engineering, system prompts, structured output, function calling/tool use and SSE streaming',
+      'RAG pipeline: parsing, chunking, embeddings, pgvector with HNSW, hybrid search, re-ranking and source citations',
+      'Evaluation: golden Q&A set, retrieval quality, answer faithfulness (RAGAS-style) and hallucination checks',
+      'Safety: prompt injection defense, PII redaction, tenant data isolation and guardrails',
+      'Cost and performance: Redis caching, semantic cache, token limits and rate limiting',
+      'Fine-tuning vs RAG: when to choose each; this project uses RAG',
+    ],
+  },
+  {
+    id: 'payflow', name: 'PayFlow', subtitle: 'Secure payment gateway',
+    description: 'A payment gateway that lets merchants accept online payments through a simple API.',
+    stack: ['Java 21','Spring Boot 3','Spring Security','Spring Data JPA','Flyway','PostgreSQL','Redis','Apache Kafka','Razorpay test mode','React','Vite','OpenAPI/Swagger','JUnit 5','Testcontainers','Postman','Docker Compose','GitHub Actions','Render/AWS'],
+    status: 'planned', contribution: 'Planned secure payment platform architecture and capabilities.',
+    features: [
+      {text:'Merchant onboarding with API keys and dashboard JWT authentication',status:'planned'}, {text:'Payment intents: create, confirm, capture, cancel',status:'planned'}, {text:'Idempotency keys and payment state machine',status:'planned'}, {text:'Full and partial refunds with ledger reconciliation',status:'planned'}, {text:'HMAC-SHA256 webhooks with exponential backoff and dead-letter retries',status:'planned'}, {text:'Rate limiting, audit logs and card tokenization (no raw card data stored)',status:'planned'}, {text:'Merchant dashboard with transactions, filters and revenue stats',status:'planned'},
+    ],
+    problem:'Preventing duplicate charges while maintaining a consistent payment state across providers, databases and asynchronous callbacks.',
+    solution:'A planned gateway using transactional ledger updates, idempotency keys, Kafka events and signed, retryable webhooks.',
+    challenge:{issue:'Double charges, inconsistent state, unreliable webhook delivery, and capture/refund race conditions.',fix:'Planned safeguards include idempotency, database transactions, retries, audit logs and PCI-DSS awareness.'},
+    linksDisabled:true, github:'', demo:'',
   },
   {
     id: 'samayahr', name: 'SamayaHR', subtitle: 'Multi-tenant HR management',

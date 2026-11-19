@@ -14,7 +14,7 @@ export default function Architecture() {
     <Head eyebrow="Architecture" title="Interactive system diagrams" text="Click any component to see its role, APIs, events and ownership." />
     <div className="seg">{diagrams.map((x) => <button key={x.id} className={`btn ${x.id === d.id ? 'on' : ''}`} onClick={() => { setSp({ d: x.id }); setSel(null) }}>{x.title.split(':')[0]}</button>)}</div>
     {d.confidential && <p className="note" style={{ marginBottom: 16 }}>Generalized view of a company project. Names and internals are intentionally simplified.</p>}
-    <Diagram key={d.id} nodes={d.nodes} edges={d.edges} selected={sel} onSelect={setSel} />
+    <Diagram key={d.id} id={d.id} nodes={d.nodes} edges={d.edges} selected={sel} onSelect={setSel} />
     <div className="glass stack" style={{ marginTop: 20 }} aria-live="polite">
       {node ? (<><div className="row"><h3>{node.name}</h3><Badge status={node.status} /></div><p>{node.does}</p>
         <div className="two"><L t="APIs" items={node.apis} /><L t="Depends on" items={node.deps.map((i) => by[i]?.name ?? i)} /><L t="Produces events" items={node.produces} /><L t="Consumes events" items={node.consumes} /></div>
